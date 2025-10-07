@@ -1,0 +1,45 @@
+{% extends 'header.html' %}
+{% block body %}
+  
+<main class="main">
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero section position-relative text-center">
+
+    <!-- Background Image -->
+    <img src="{{ url_for('static', filename='assets/img/index3.jpg') }}" 
+         alt="Background" 
+         class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover opacity-85" 
+         data-aos="fade-in">
+
+    <!-- Overlay for readability -->
+    <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
+
+    <!-- Hero Content -->
+    <div class="container position-relative text-white" data-aos="zoom-out" data-aos-delay="100">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+
+          <!-- Compact Intro -->
+          <h2 class="fw-semibold mb-2" style="font-size: 1.5rem;">Hello, I am</h2>
+          <h1 class="fw-bold mb-2" style="font-size: 2rem;">Harsh Pandya</h1>
+          <h5 class="text-success mb-3" style="font-size: 1rem;">Python Developer</h5>
+
+          <!-- Subtle Tagline -->
+          <p class="mb-4" style="font-size: 0.9rem;">
+            Building efficient, scalable, and impactful software solutions.
+          </p>
+
+          <!-- About Me Button -->
+          <a href="/about" class="btn btn-theme" style="font-size: 0.9rem;">
+            About Me
+          </a>
+
+        </div>
+      </div>
+    </div>
+
+  </section><!-- /Hero Section -->
+
+</main>
+{% endblock body %}

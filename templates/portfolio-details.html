@@ -1,0 +1,101 @@
+{% extends 'header.html' %}
+{% block body %}
+
+  <main class="main">
+
+    <!-- Portfolio Details Section -->
+    <section id="portfolio-details" class="portfolio-details section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Portfolio Details</h2>
+        <p>Explore in-depth information about my projects and their implementation.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-8">
+            <div class="portfolio-details-slider swiper init-swiper">
+
+              <script type="application/json" class="swiper-config">
+                {
+                  "loop": true,
+                  "speed": 600,
+                  "autoplay": {
+                    "delay": 5000
+                  },
+                  "slidesPerView": "auto",
+                  "pagination": {
+                    "el": ".swiper-pagination",
+                    "type": "bullets",
+                    "clickable": true
+                  }
+                }
+              </script>
+
+              <div class="swiper-wrapper align-items-center">
+
+                <div class="swiper-slide">
+                  <img src="{{url_for('static',filename='assets/img/project_images/' + project.img_1)}}" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="{{url_for('static',filename='assets/img/project_images/' + project.img_2)}}" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="{{url_for('static',filename='assets/img/project_images/' + project.img_3)}}" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="{{url_for('static',filename='assets/img/project_images/' + project.img_4)}}" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="{{url_for('static',filename='assets/img/project_images/' + project.img_4)}}" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="{{url_for('static',filename='assets/img/project_images/' + project.img_1)}}" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="{{url_for('static',filename='assets/img/project_images/' + project.img_1)}}" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="{{url_for('static',filename='assets/img/project_images/' + project.img_1)}}" alt="">
+                </div>
+
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="portfolio-info" data-aos="fade-up" data-aos-delay="300">
+              <h3>Project information</h3>
+              <ul>
+                <li><strong>Category</strong>: {{project.p_category}}</li>
+                <!-- <li><strong>Client</strong>: ASU Company</li> -->
+                <li><strong>Project date</strong>: {{project.p_start_date}}</li>
+                <li><strong>Project URL</strong>: <a href="{{project.p_url}}">{{project.p_url}}</a></li>
+              </ul>
+            </div>
+            <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
+              <h2>{{project.p_name}}</h2>
+              <p>
+                {{project.p_desc}}
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Portfolio Details Section -->
+
+  </main>
+{% endblock body %}

@@ -1,0 +1,53 @@
+{% extends 'header.html' %}
+{% block body %}
+
+  <main class="main">
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Projects</h2>
+        <p>
+           Showcasing my work, innovation, and problem-solving abilities through real-world projects.
+          </p>      
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+          <!-- <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+            <li data-filter="*" class="filter-active">All</li>
+            <li data-filter=".filter-app">App</li>
+            <li data-filter=".filter-product">Card</li>
+            <li data-filter=".filter-branding">Web</li> -->
+          </ul><!-- End Portfolio Filters -->
+
+          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+             
+            {% for project in projects %}
+              
+          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-{{ project.p_category|lower }}">
+              <img src="{{url_for('static',filename='assets/img/project_images/' + project.img_url)}}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>{{project.p_name}}</h4>
+                <p>{{project.p_desc[0:50]}}.....</p>
+                <a href="{{url_for('static',filename='assets/img/project_images/' + project.img_url)}}" title="{{project.p_name}}" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="/project_details/{{project.p_name}}" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+              
+            {% endfor %}
+            
+          </div><!-- End Portfolio Container -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Portfolio Section -->
+
+  </main>
+{% endblock body %}

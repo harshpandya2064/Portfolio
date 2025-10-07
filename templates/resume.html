@@ -1,0 +1,169 @@
+{% extends 'header.html' %}
+{% block body %}
+
+<main class="main">
+
+  <!-- Resume Section -->
+  <section id="resume" class="resume section">
+
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+      <h2>Resume</h2>
+      <p>Showcasing my skills, experience, and achievements for career opportunities.</p>
+    </div><!-- End Section Title -->
+
+    <!-- ✅ A4 Resume Wrapper -->
+    <div class="resume-wrapper">
+      <div class="resume-page">
+
+        <div class="container">
+          <div class="row">
+
+            <!-- Left Column -->
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+
+              <h3 class="resume-title">Summary</h3>
+              <div class="resume-item pb-0">
+                <h4>Pandya Harsh</h4>
+                <p>
+                  <em>Seeking a challenging role in the IT industry where I can utilize my programming skills and academic knowledge 
+                  to contribute to company success and advance my career.</em>
+                </p>
+                <ul>
+                  <li>Email: harshpandya677@gmail.com</li>
+                  <li>Phone: +91 78628 65575</li>
+                  <li>LinkedIn: <a href="https://linkedin.com/in/harsh-pandya-549389266" target="_blank">linkedin.com/in/harsh-pandya-549389266</a></li>
+                  <li>Location: Chanakyapuri, Ahmedabad, Gujarat 380061</li>
+                </ul>
+              </div><!-- End Resume Item -->
+
+              <h3 class="resume-title">Skills</h3>
+              <div class="resume-item">
+                <h5>Python</h5>
+                <ul></ul>
+
+                <h5>Flask (Framework)</h5>
+                <ul></ul>
+
+                <h5>MySQL</h5>
+                <ul></ul>
+
+                <h5>HTML</h5>
+                <ul></ul>
+                <h5>CSS</h5>
+                <ul></ul>
+               
+              
+              </div><!-- End Skills -->
+
+              <h3 class="resume-title">Education</h3>
+              <div class="resume-item">
+                <h4>Master of Computer Applications</h4>
+                <h5>2024 - Present</h5>
+                <p><em>GLS University, Ahmedabad, India</em></p>
+              </div>
+
+              <div class="resume-item">
+                <h4>Bachelor of Computer Applications</h4>
+                <h5>2021 - 2024</h5>
+                <p><em>Bholabhai Patel College of Computer Studies, KSV University, Gandhinagar, India</em></p>
+                <p>CGPA: <strong>8.43</strong></p>
+              </div>
+
+              <div class="resume-item">
+                <h4>HSC</h4>
+                <h5>2020 - 2021</h5>
+                <p><em>Vidhyamanjari Gyanpith Sanskruti School, Sihor, India</em></p>
+                <p>Percentage: <strong>65%</strong></p>
+              </div>
+
+              <div class="resume-item">
+                <h4>SSC</h4>
+                <h5>2018 - 2019</h5>
+                <p><em>Vidhyamanjari Gyanpith Sanskruti School, Sihor, India</em></p>
+                <p>Percentage: <strong>64%</strong></p>
+              </div>
+
+            </div><!-- End Left Column -->
+
+            <!-- Right Column -->
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+
+              <h3 class="resume-title">Projects</h3>
+
+              <div class="resume-item">
+                <h4>Face Detection Attendance System</h4>
+                <h5>03/2025 - Present</h5>
+                <p><em>Description:</em></p>
+                <ul>
+                  <li>Developed a smart web and mobile-based attendance system using face recognition technology.</li>
+                  <li>Two user roles: faculty and student.</li>
+                  <li>Faculty can scan student faces using a webcam or camera, and the system auto-records attendance with timestamps.</li>
+                  <li>Role: Backend</li>
+                </ul>
+              </div>
+
+              <div class="resume-item">
+                <h4>E-Commerce Website For Online Furniture Shopping Using Python Flask</h4>
+                <h5>05/2025 - 06/2025</h5>
+                <p><em>Description:</em></p>
+                <ul>
+                  <li>Built a platform for browsing and purchasing furniture online.</li>
+                  <li>Developed using Python, Flask, MySQL, HTML, CSS, and Bootstrap.</li>
+                  <li>Role: Backend</li>
+                </ul>
+              </div>
+
+              <div class="resume-item">
+                <h4>Blog on Cricket Using Python Flask</h4>
+                <h5>05/2025 – 05/2025</h5>
+                <p><em>Description:</em></p>
+                <ul>
+                  <li>Created a simple blog focused on cricket news and updates.</li>
+                  <li>Built using Python, Flask, MySQL, HTML, CSS, and Bootstrap.</li>
+                  <li>Role: Backend</li>
+                </ul>
+              </div>
+
+              <div class="resume-item">
+                <h4>E-commerce Project on Online Grocery Shopping System Using PHP</h4>
+                <h5>01/2024 – 04/2024</h5>
+                <p><em>Description:</em></p>
+                <ul>
+                  <li>Developed an e-commerce site for purchasing grocery items online.</li>
+                  <li>Created using PHP, MySQL, HTML, and CSS.</li>
+                  <li>Role: Frontend & Backend</li>
+                </ul>
+              </div>
+
+              <h3 class="resume-title">Certificates</h3>
+              <div class="resume-item">
+                <ul>
+                  <li>Basic Python Certificate from HackerRank</li>
+                </ul>
+              </div>
+
+            </div><!-- End Right Column -->
+
+          </div>
+        </div>
+
+        <br><br>
+
+        <!-- Download Resume Button -->
+        <div class="d-flex justify-content-end mt-3">
+          <a href="{{ url_for('static', filename='Pandya_Harsh_resume.pdf') }}" 
+            class="btn btn-theme" 
+            download>
+            📄 Download Resume
+          </a>
+        </div>
+
+      </div><!-- end resume-page -->
+    </div><!-- end resume-wrapper -->
+
+  </section><!-- /Resume Section -->
+
+</main>
+
+{% endblock body %}
